@@ -308,6 +308,9 @@ nav li a:hover:after {
 .dash {font-family: 'Lato', sans-serif;text-transform: capitalize;letter-spacing: 2px;position: relative;color: #425BB5;margin-left: 20px;font-weight: 700;}
 .dash:before {position: absolute;width: 15px;left: -20px;content: "";display: block;height: 2px;background: #425BB5;top: 9px;}
 
+.banner-wrap .dash{color:#fff}
+.banner-wrap .dash:before{background:#fff}
+
 .section.banner h1 {
     font-size: 8rem;line-height: 1.2;
     -webkit-animation: AnimationName 50s ease infinite;
@@ -547,6 +550,10 @@ nav li a:hover:after {
 
 #projects {
     padding: 100px 0;
+}
+
+.projects .section-title,.contact .section-title{
+    text-align: center;
 }
 
 .portfolio .categories-grid span {
@@ -827,9 +834,8 @@ fieldset {
 }
 
 .social {
-    padding-left: 0;
-    list-style: none;
     margin-top: 20px;
+    overflow: hidden;
 }
 
 .social li {
