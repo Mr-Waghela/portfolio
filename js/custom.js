@@ -70,44 +70,48 @@ $(document).ready(function () {
 
 
     // form validation
-  // $("#submit").click(function(event){
-  //     event.preventDefault();
-  //     var name=$('#contact_name');
-  //   var is_name=name.val();
-  //   if(is_name){
-  //     name.parent().removeClass("invalid").addClass("valid");
-  //     var email=$('#contact_email');
-  //     var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  //     var is_email=re.test(email.val());
-  //     if(is_email){
-  //       email.parent().removeClass("invalid").addClass("valid");
-  //       var pnum=$('#contact_number');
-  //       var re = /([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/;
-  //       var is_num=re.test(pnum.val());
-  //       if(is_num){
-  //         pnum.parent().removeClass("invalid").addClass("valid");
-  //         var msg=$('#contact_message');
-  //         var message=msg.val();
-  //         if(message){
-  //           msg.parent().removeClass("invalid").addClass("valid");
-  //           $("#submit").unbind('click');
-  //         }
-  //         else{
-  //           msg.parent().removeClass("valid").addClass("invalid");
-  //         }
-  //       }
-  //       else{
-  //         pnum.parent().removeClass("valid").addClass("invalid");
-  //       }
-  //     }
-  //     else{
-  //       email.parent().removeClass("valid").addClass("invalid");
-  //     }
-  //   }
-  //   else{
-  //     name.parent().removeClass("valid").addClass("invalid");
-  //   }
-  // });
+  $("#submit").click(function(event){
+
+      var name=$('#contact_name');
+    var is_name=name.val();
+    if(is_name){
+      name.parent().removeClass("invalid").addClass("valid");
+      var email=$('#contact_email');
+      var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      var is_email=re.test(email.val());
+      if(is_email){
+        email.parent().removeClass("invalid").addClass("valid");
+        var pnum=$('#contact_number');
+        var re = /([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/;
+        var is_num=re.test(pnum.val());
+        if(is_num){
+          pnum.parent().removeClass("invalid").addClass("valid");
+          var msg=$('#contact_message');
+          var message=msg.val();
+          if(message){
+            msg.parent().removeClass("invalid").addClass("valid");
+            $("#submit").unbind('click');
+          }
+          else{
+            msg.parent().removeClass("valid").addClass("invalid");
+            event.preventDefault();
+          }
+        }
+        else{
+          pnum.parent().removeClass("valid").addClass("invalid");
+          event.preventDefault();
+        }
+      }
+      else{
+        email.parent().removeClass("valid").addClass("invalid");
+        event.preventDefault();
+      }
+    }
+    else{
+      name.parent().removeClass("valid").addClass("invalid");
+      event.preventDefault();
+    }
+  });
 });
 
 
