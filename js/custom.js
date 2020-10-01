@@ -90,10 +90,24 @@ $(document).ready(function () {
           var message=msg.val();
           if(message){
             msg.parent().removeClass("invalid").addClass("valid");
-            var $form = $('contact-form');
-            $.post($form.attr("action"), $form.serialize()).then(function() {
-              alert("Thank you!");
-            });
+            let testForm = document.querySelector("#contact-form");   
+              const formData = new FormData(testForm);
+              fetch(testForm.getAttribute('action'), {
+                method: 'POST',
+                headers: {
+                  'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+                  'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                },
+                body: new URLSearchParams(formData).toString()
+              })
+              .then(res => {
+                if (res) {
+                  M.toast({
+                    html: 'Thank you for your submission!',
+                    classes: 'pulse'
+                  });
+                }
+              });
           }
           else{
             msg.parent().removeClass("valid").addClass("invalid");
