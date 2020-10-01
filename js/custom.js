@@ -119,12 +119,6 @@ $(document).ready(function () {
       event.preventDefault(); 
       alert("Please fill in the details.");
     }
-    else{
-      var $form = $(this);
-      $.post($form.attr("action"), $form.serialize()).then(function() {
-        alert("Your message was sent successfully! I will be in touch as soon as I can. ");
-      });
-    }
   });
 });
 
