@@ -71,7 +71,7 @@ $(document).ready(function () {
 
     // form validation
   $("#submit").click(function(event){
-
+    event.preventDefault();
       var name=$('#contact_name');
     var is_name=name.val();
     if(is_name){
@@ -90,26 +90,25 @@ $(document).ready(function () {
           var message=msg.val();
           if(message){
             msg.parent().removeClass("invalid").addClass("valid");
-            $("#submit").unbind('click');
+            var $form = $('contact-form');
+            $.post($form.attr("action"), $form.serialize()).then(function() {
+              alert("Thank you!");
+            });
           }
           else{
             msg.parent().removeClass("valid").addClass("invalid");
-            event.preventDefault();
           }
         }
         else{
           pnum.parent().removeClass("valid").addClass("invalid");
-          event.preventDefault();
         }
       }
       else{
         email.parent().removeClass("valid").addClass("invalid");
-        event.preventDefault();
       }
     }
     else{
       name.parent().removeClass("valid").addClass("invalid");
-      event.preventDefault();
     }
   });
 });
