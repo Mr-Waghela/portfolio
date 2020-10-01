@@ -199,11 +199,11 @@
                 </ul>
             </div>
             <div class="col-md-8" data-aos="fade-up">
-                <form class="contact-bg" id="contact-form" name="contact" method="POST" novalidate="novalidate" data-netlify="true">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" />
-                    <input type="email" name="email" class="form-control" placeholder="Your E-mail" />
-                    <input type="text" name="phone" class="form-control" placeholder="Phone Number" />
-                    <textarea name="message" class="form-control" placeholder="Your Message" style="height:120px"></textarea>
+                <form class="contact-bg" id="contact-form" name="contact" method="POST" novalidate="novalidate" data-netlify="true" action="/#contact-form">
+                    <input type="text" name="name" class="form-control" id="contact_name" placeholder="Your Name" />
+                    <input type="email" name="email" class="form-control" id="contact_email" placeholder="Your E-mail" />
+                    <input type="text" name="number" class="form-control" id="contact_number" placeholder="Phone Number" />
+                    <textarea name="message" class="form-control" placeholder="Your Message" style="height:120px" id="contact_message"></textarea>
                     <div data-netlify-recaptcha="true"></div>
                     <button id="submit" type="submit" name="submit" class="btn btn-glance form-btn">Send</button>
                 </form>
