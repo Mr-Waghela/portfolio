@@ -70,54 +70,45 @@ $(document).ready(function () {
 
 
     // form validation
-
-    $('#contact_name').on('input', function() {
-      var input=$(this);
-      var is_name=input.val();
-      if(is_name){input.removeClass("invalid").addClass("valid");}
-      else{input.removeClass("valid").addClass("invalid");}
-    });
-    
-    // Email must be an email
-    $('#contact_email').on('input', function() {
-      var input=$(this);
-      var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-      var is_email=re.test(input.val());
-      if(is_email){input.removeClass("invalid").addClass("valid");}
-      else{input.removeClass("valid").addClass("invalid");}
-    });
-    
-    // <!--Website must be a website -->
-    $('#contact_number').on('input', function() {
-      var input=$(this);
-      var re = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
-      var is_num=re.test(input.val());
-      if(is_num){input.removeClass("invalid").addClass("valid");}
-      else{input.removeClass("valid").addClass("invalid");}
-    });
-    
-    // <!--Message can't be blank -->
-    $('#contact_message').keyup(function(event) {
-      var input=$(this);
-      var message=$(this).val();
-      if(message){input.removeClass("invalid").addClass("valid");}
-      else{input.removeClass("valid").addClass("invalid");}	
-    });
-
-  // <!-- After Form Submitted Validation-->
   $("#submit").click(function(event){
-    var form_data=$("#contact-form").serializeArray();
-    var error_free=true;
-    for (var input in form_data){
-      var element=$("#contact_"+form_data[input]['name']);
-      var valid=element.hasClass("valid");
-      var error_element=$("span", element.parent());
-      if (!valid){error_element.removeClass("error").addClass("error_show"); error_free=false;}
-      else{error_element.removeClass("error_show").addClass("error");}
+      event.preventDefault();
+      var name=$('#contact_name');
+    var is_name=name.val();
+    if(is_name){
+      name.parent().removeClass("invalid").addClass("valid");
+      var email=$('#contact_email');
+      var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      var is_email=re.test(email.val());
+      if(is_email){
+        email.parent().removeClass("invalid").addClass("valid");
+        var pnum=$('#contact_number');
+        var re = /([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/;
+        var is_num=re.test(pnum.val());
+        if(is_num){
+          pnum.parent().removeClass("invalid").addClass("valid");
+          var msg=$('#contact_message');
+          var message=msg.val();
+          if(message){
+            msg.parent().removeClass("invalid").addClass("valid");
+            var $form = $('contact-form');
+            $.post($form.attr("action"), $form.serialize()).then(function() {
+              alert('Your message was sent successfully! I will be in touch as soon as I can.');
+            });
+          }
+          else{
+            msg.parent().removeClass("valid").addClass("invalid");
+          }
+        }
+        else{
+          pnum.parent().removeClass("valid").addClass("invalid");
+        }
+      }
+      else{
+        email.parent().removeClass("valid").addClass("invalid");
+      }
     }
-    if (!error_free){
-      event.preventDefault(); 
-      alert("Please fill in the details.");
+    else{
+      name.parent().removeClass("valid").addClass("invalid");
     }
   });
 });

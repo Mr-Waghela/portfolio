@@ -738,8 +738,11 @@ nav li a:hover:after {
 #contact-form input,
 #contact-form textarea {
     height: 50px;
-    margin-bottom: 10px;
     border-radius: 0;
+}
+
+.input-wrap{
+    margin-bottom: 10px;
 }
 
 #contact-form label {
@@ -861,18 +864,23 @@ fieldset {
 .error{
     display: none;
     margin-left: 10px;
-}		
+}	
 
-.error_show{
+
+.invalid .error{
+    display: block;
     color: red;
-    margin-left: 10px;
+    margin: 5px 0;
+}
+.valid .error{
+    display: none;
 }
 
-input.invalid, textarea.invalid{
+.invalid input, .invalid textarea{
     border: 2px solid red;
 }
 
-input.valid, textarea.valid{
+.valid input, .valid textarea{
     border: 2px solid green;
 }
 
