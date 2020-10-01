@@ -90,9 +90,9 @@ $(document).ready(function () {
           var message=msg.val();
           if(message){
             msg.parent().removeClass("invalid").addClass("valid");
-            let testForm = document.querySelector("#contact-form");   
-              const formData = new FormData(testForm);
-              fetch(testForm.getAttribute('action'), {
+            let contactForm = document.querySelector("#contact-form");   
+              const formData = new FormData(contactForm);
+              fetch(contactForm.getAttribute('action'), {
                 method: 'POST',
                 headers: {
                   'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
@@ -102,9 +102,10 @@ $(document).ready(function () {
               })
               .then(res => {
                 if (res) {
-                  M.toast({
-                    html: 'Thank you for your submission!',
-                    classes: 'pulse'
+                  alert('Your message was sent successfully! I will be in touch as soon as I can.')
+                  $("form").each(function(){
+                    $(this).find(':input').val('');
+                    $(this).find(':input').parent().removeClass('valid');
                   });
                 }
               });
@@ -125,6 +126,18 @@ $(document).ready(function () {
       name.parent().removeClass("valid").addClass("invalid");
     }
   });
+
+
+  var monthArr = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+  var tdate = new Date();
+  var dd = tdate.getDate(); //yields day
+  var MM = tdate.getMonth(); //yields month
+  var yyyy = tdate.getFullYear(); //yields year
+  var currentDate= dd + "-" +( MM+1) + "-" + yyyy;
+  var ele = document.getElementById('time');
+  ele.setAttribute('datetime',currentDate);
+  ele.innerText = dd + ' ' + monthArr[MM] + ' ' + yyyy;
 });
 
 

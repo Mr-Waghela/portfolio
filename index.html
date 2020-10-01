@@ -30,7 +30,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <!-- Bootstrap -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Open+Sans:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,900&family=Source+Code+Pro:ital@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" />
     <!-- main style -->
     <link href="css/style.css" rel="stylesheet">
@@ -52,7 +52,9 @@
     <!-- header -->
     <header class="navbar-fixed-top">
         <nav class="d-flex justify-content-between align-center">
-            <a href="#home" class="logo-trans"><span class="logo">CW</span></a>
+            <div class="logo-wrap">
+                <a href="#home" class="logo-trans"><span class="logo">CW</span></a>
+            </div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">experience</a></li>
@@ -71,7 +73,8 @@
                     <h4 class="dash">Chirag Waghela</h4>
                     <h1>Frontend <br> Developer.</h1> 
                 </div>
-                <div class="type-text"><span
+                <div class="type-text">
+                    <span
                     class="txt-rotate" data-period="500" data-rotate='[ "HTML.", "Css.", "Javascript.", "Wordpress.", "Angular." ]'></span></div>
             </div>
         </div>
@@ -81,23 +84,27 @@
     <!-- about -->
     <div class="section about" id="about">
         <div class="container">
-            <div class="col-md-6" data-aos="fade-up">
-                <h1 class="title">Know About me</h1>
-                <h2 class="title-into">Hi! I'm Chirag &#128075;&#127996; &#128526;,</h2>
-                <p class="abt-me-txt">A 26 year old Front End Engineer based in Mumbai with an experience of 2+ year's (and counting..... &#128540;). I would like to call myself as a passionate developer who loves coding and enjoys solving problem..💓.</p>
-                <p class="abt-me-txt">Apart from my job, I like to learn and guide 🧭 people to grow as a developer...</p>
-                <p class="abt-me-txt">In my free time you can find me at the gym 🏋️‍♂️, or at the beach  🏖  or bikeriding &#128692;&#127996; around Mumbai.</p>
-                <img class="signature" src="img/Signature.svg" width="230" alt="" />
-            </div>
-            <div class="col-md-6 about-img-div d-flex flex-row-reverse">
-                <div class="about-border" data-aos="fade-up" data-aos-delay=".5"></div>
-                <div class="img-div" align="center" data-aos="fade-right">
-                    <p><xmp> </> </xmp></p>
-                    <p>{}</p>
-                    <p>Javascript</p>
-                    <p>Wordpress</p>
+            <h1 class="title">Know <br> About me</h1>
+            <div class=" d-flex flex-wrap">
+                <div class="about-wrap" data-aos="fade-up">
+                    <h2 class="title-into">Hi! I'm Chirag &#128075;&#127996; &#128526;,</h2>
+                    <p class="abt-me-txt">A 26 year old Front End Engineer based in Mumbai with an experience of 2+ year's (and counting..... &#128540;). I would like to call myself as a passionate developer who loves coding and enjoys solving problem..💓.</p>
+                    <p class="abt-me-txt">Apart from my job, I like to learn and guide 🧭 people to grow as a developer...</p>
+                    <p class="abt-me-txt">In my free time you can find me at the gym 🏋️‍♂️, or at the beach  🏖  or bikeriding &#128692;&#127996; around Mumbai.</p>
+                    <div class="signature-wrap">
+                        <img class="signature" src="img/Signature.svg" alt="" />
+                    </div>
                 </div>
-
+                <div class="about-img-div d-flex flex-row-reverse">
+                    <div class="about-border" data-aos="fade-up" data-aos-delay=".5"></div>
+                    <div class="img-div" data-aos="fade-right">
+                        <p><xmp> </> </xmp></p>
+                        <p>{}</p>
+                        <p>Javascript</p>
+                        <p>Wordpress</p>
+                    </div>
+    
+                </div>
             </div>
         </div>
     </div>
@@ -106,31 +113,33 @@
     <!-- experience  -->
     <div class="section" id="experience">
         <div class="container">
-            <div class="col-md-12">
+            <div class="sec-title-wrap">
                 <h1 class="section-title">My <br /> Experience</h1>
             </div>
-            <div class="col-md-12">
-                <ul class="timeline col-md-7">
-                    <li class="timeline-event" data-aos="fade-up">
-                        <label class="timeline-event-icon"></label>
-                        <div class="timeline-event-copy">
-                            <p class="timeline-event-thumbnail">January 2019 - Present</p>
-                            <h3>UI Developer</h3>
-                            <h4 class="dash">Media.net</h4>
-                            <p></p>
-                        </div>
-                    </li>
-                    <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
-                        <label class="timeline-event-icon"></label>
-                        <div class="timeline-event-copy">
-                            <p class="timeline-event-thumbnail">October 2018 - December 2018</p>
-                            <h3>Frontend Developer</h3>
-                            <h4 class="dash">Nevon Solutions</h4>
-                            <p></p>
-                        </div>
-                    </li>
-                </ul>
-                <div class="col-md-5">
+            <div class="d-flex flex-wrap">
+                <div class="timeline-wrap">
+                    <ul class="timeline">
+                        <li class="timeline-event" data-aos="fade-up">
+                            <label class="timeline-event-icon"></label>
+                            <div class="timeline-event-copy">
+                                <p class="timeline-event-thumbnail">January 2019 - Present</p>
+                                <h3>UI Developer</h3>
+                                <h4 class="dash">Media.net</h4>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
+                            <label class="timeline-event-icon"></label>
+                            <div class="timeline-event-copy">
+                                <p class="timeline-event-thumbnail">October 2018 - December 2018</p>
+                                <h3>Frontend Developer</h3>
+                                <h4 class="dash">Nevon Solutions</h4>
+                                <p></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="growth-img">
                     <img src="img/growth.svg" width="400" class="img-responsive gw-img" alt="" align="right" data-aos="fade-right" data-aos-delay="0" />
                 </div>
             </div>
@@ -141,21 +150,21 @@
     <!-- projects -->
     <div class="section projects" id="projects">
         <div class="container">
-            <div class="col-md-12">
+            <div class="sec-title-wrap">
                 <h1 class="section-title">My Projects</h1> 
             </div>
             <!-- main container -->
-            <div class="main-container portfolio-inner clearfix">
+            <div class="main-container portfolio-inner">
                 <!-- portfolio div -->
                 <div class="portfolio-div">
                     <div class="portfolio">
                         <!-- portfolio_container -->
-                        <div class="no-padding portfolio_container clearfix" data-aos="fade-up">
+                        <div class="portfolio_container d-flex flex-wrap justify-content-between" data-aos="fade-up">
                             <!-- single work -->
-                            <div class="col-md-4 col-sm-">
+                            <div class="project-list">
                                 <a href="https://chirag7594.github.io/Pokedex/" class="portfolio_item" target="_blank"> <img src="img/projects/pokedex.png" alt="image" class="img-responsive" />
                                     <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
+                                        <div class="portfolio-border">
                                             <div class="item_info"> <span>Pokedex</span> <em>HTML / CSS / Vanilla JS</em> </div>
                                         </div>
                                     </div>
@@ -178,55 +187,61 @@
     <!-- contact -->
     <div class="section contact" id="contact">
         <div class="container">
-            <div class="col-md-12">
-                <h1 class="section-title">Contact  Me</h1>
-                
+            <div class="sec-title-wrap">
+                <h1 class="section-title">Contact Me</h1>
             </div>
-            <div class="col-md-4" data-aos="fade-up">
-                <h3>Email</h3>
-                <p><a href='&#109;ailto&#58;c&#104;i&#37;72%6&#49;g&#46;wa%67he%6C&#97;&#55;&#53;&#57;&#37;34&#64;&#103;mail%2Ecom'>chirag&#46;wagh&#101;&#108;&#97;7594&#64;gmai&#108;&#46;com</a></p>
-
-                <h3>Social Network</h3>
-
-                <ul class="social">
-                    <li>
-                        <a href="https://www.linkedin.com/in/chirag-waghela/" target="_blank">
-                        <svg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 512 512'><path d='M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z'/></svg></a></li>
-                    <li>
-                        <a href="https://www.instagram.com/mr.waghela75/" target="_blank">
-                            <svg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 512 512'><path d='M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z'/><path d='M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z'/><path d='M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z'/></svg></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-8" data-aos="fade-up">
-                <form class="contact-bg" id="contact-form" name="contact" method="POST" novalidate="novalidate" data-netlify="true" action="/#home">
-                    <div class="input-wrap">
-                        <input type="text" name="name" class="form-control" id="contact_name" placeholder="Your Name" />
-                        <span class="error">This field is required</span>
-                    </div>
-                    <div class="input-wrap">
-                        <input type="email" name="email" class="form-control" id="contact_email" placeholder="Your E-mail" />
-                        <span class="error">This field is required</span>
-                    </div>
-                    <div class="input-wrap">
-                        <input type="number" name="number" class="form-control" id="contact_number" placeholder="Phone Number" maxlength="10"/>
-                        <span class="error">This field is required</span>
-                    </div>
-                    <div class="input-wrap">
-                        <textarea name="message" class="form-control" placeholder="Your Message" style="height:120px" id="contact_message"></textarea>
-                        <span class="error">This field is required</span>
-                    </div>
-                    <button id="submit" type="submit" name="submit" class="btn btn-glance form-btn">Send</button>
-                </form>
+            <div class="d-flex flex-wrap">
+                <div class="contact-details" data-aos="fade-up">
+                    <h3>Email</h3>
+                    <p><a href='&#109;ailto&#58;c&#104;i&#37;72%6&#49;g&#46;wa%67he%6C&#97;&#55;&#53;&#57;&#37;34&#64;&#103;mail%2Ecom'>chirag&#46;wagh&#101;&#108;&#97;7594&#64;gmai&#108;&#46;com</a></p>
+    
+                    <h3>Social Network</h3>
+    
+                    <ul class="social">
+                        <li>
+                            <a href="https://www.linkedin.com/in/chirag-waghela/" target="_blank">
+                            <svg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 512 512'><path d='M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z'/></svg></a></li>
+                        <li>
+                            <a href="https://www.instagram.com/mr.waghela75/" target="_blank">
+                                <svg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 512 512'><path d='M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z'/><path d='M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z'/><path d='M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z'/></svg></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-form-wrap" data-aos="fade-up">
+                    <form class="contact-bg" id="contact-form" name="contact" method="POST" novalidate="novalidate" data-netlify="true" action="/#home">
+                        <div class="input-wrap">
+                            <input type="text" name="name" class="form-control" id="contact_name" placeholder="Your Name" />
+                            <span class="error">This field is required</span>
+                        </div>
+                        <div class="input-wrap">
+                            <input type="email" name="email" class="form-control" id="contact_email" placeholder="Your E-mail" />
+                            <span class="error">This field is required</span>
+                        </div>
+                        <div class="input-wrap">
+                            <input type="number" name="number" class="form-control" id="contact_number" placeholder="Phone Number" maxlength="10"/>
+                            <span class="error">This field is required</span>
+                        </div>
+                        <div class="input-wrap">
+                            <textarea name="message" class="form-control" placeholder="Your Message" style="height:120px" id="contact_message"></textarea>
+                            <span class="error">This field is required</span>
+                        </div>
+                        <button id="submit" type="submit" name="submit" class="btn btn-glance form-btn">Send</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
     <!-- ./contact -->
 
+    <footer>
+        <div class="container">
+            <p>Last updated : <time datetime="" id="time"></time></p>
+        </div>
+    </footer>
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
 

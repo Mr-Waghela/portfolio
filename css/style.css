@@ -1,5 +1,6 @@
 *{margin: 0;padding: 0;border: 0;list-style: none;text-decoration: none;box-sizing: border-box;-moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
 a:focus, a:hover{text-decoration: none;color: inherit;}
+img{width: 100%;height: auto;}
 
 /* custom css classes */
 
@@ -23,6 +24,8 @@ a:focus, a:hover{text-decoration: none;color: inherit;}
 html{font-size:62.5%;scroll-behavior: smooth;height: 100%;-webkit-text-size-adjust:100%;}
 body{font-family: 'Open sans',-apple-system, BlinkMacSystemFont, Segoe UI, segoe ui, SegoeUI, Segoe, Helvetica, Arial, sans-serif;color: #555555;font-weight:400;overflow-x:hidden;-webkit-font-smoothing:antialiased;height: 100%;background-color: #ffffff;line-height: 1.5;}
 .section-title{font-size: 5rem;line-height: 1;margin-bottom: 50px;}
+.container{max-width: 1220px;margin: 0 auto;padding: 0 20px;}
+.section{padding: 100px 0;}
 
 /* preloader
 ==================================================*/
@@ -170,6 +173,11 @@ header {
 	padding:0 30px ;
 	-webkit-transition: all .5s;
     transition: all .5s;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 99;
 }
 
 .logo-trans{
@@ -303,35 +311,20 @@ nav li a:hover:after {
     -webkit-animation: gradban 50s ease infinite;
     -moz-animation: gradban 50s ease infinite;
     animation: gradban 50s ease infinite;
+    padding-top: 0;
 }
 
-.dash {font-family: 'Lato', sans-serif;text-transform: capitalize;letter-spacing: 2px;position: relative;color: #425BB5;margin-left: 20px;font-weight: 700;}
-.dash:before {position: absolute;width: 15px;left: -20px;content: "";display: block;height: 2px;background: #425BB5;top: 9px;}
+
+.banner-inner {width: 50%;}
+
+.dash {font-family: 'Lato', sans-serif;text-transform: capitalize;letter-spacing: 2px;position: relative;color: #425BB5;margin-left: 20px;font-weight: 700;font-size: 1.6rem;}
+.dash:before {position: absolute;width: 15px;left: -10px;content: "";display: block;height: 2px;background: #425BB5;top: 50%;transform: translateX(-50%);}
 
 .banner-wrap .dash{color:#fff}
 .banner-wrap .dash:before{background:#fff}
 
 .section.banner h1 {
-    font-size: 8rem;line-height: 1.2;
-    -webkit-animation: AnimationName 50s ease infinite;
-    -moz-animation: AnimationName 50s ease infinite;
-    animation: AnimationName 50s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-    0%{color: #fff;}
-    50%{color: #000;}
-    100%{color: #fff;}
-}
-@-moz-keyframes AnimationName {
-    0%{color: #fff;}
-    50%{color: #000;}
-    100%{color: #fff;}
-}
-@keyframes AnimationName {
-    0%{color: #fff;}
-    50%{color: #000;}
-    100%{color: #fff;}
+    font-size: 8rem;line-height: 1.2;color: #fff;
 }
 
 @-webkit-keyframes gradban {
@@ -359,7 +352,7 @@ nav li a:hover:after {
 }
 
 .type-text{
-    width: 25%;
+    width: 50%;
 	font-size: 5rem;
     line-height: 1.5;
     color: #fff;
@@ -374,9 +367,9 @@ nav li a:hover:after {
 
 /* about section
 ==================================================*/
-
-#about {
-    padding: 100px 0;
+.about-wrap,.about-img-div{
+    width: 50%;
+    position: relative;
 }
 
 .about-img-div img {
@@ -388,8 +381,8 @@ nav li a:hover:after {
     border: 10px solid #425BB5;
     width: 400px;
     height: 400px;
-    top: 40px;
-    left: 120px;
+    top: 20px;
+    right: 20px;
     z-index: 1
 }
 
@@ -409,6 +402,10 @@ nav li a:hover:after {
     font-size: 2rem;line-height: 1.5;margin-bottom: 20px;
 }
 
+.signature-wrap{
+    width: 200px;
+}
+
 .img-div{
     height: 400px;
     width: 400px;
@@ -417,14 +414,22 @@ nav li a:hover:after {
     font-size: 5rem;
     letter-spacing: 2px;
     padding: 40px;
+    text-align: center;
 }
 
 /* experience section
 ==================================================*/
 
 #experience {
-    padding: 100px 0;
     background: #f3f3f3
+}
+
+.timeline-wrap{
+    width: 75%;
+}
+
+.growth-img{
+    width: 25%;
 }
 
 .experience-row {
@@ -492,12 +497,11 @@ nav li a:hover:after {
 }
 
 .timeline-event-copy h3 {
-    font-size: 1.75em;
+    font-size: 2.4em;
 }
 
 .timeline-event-copy h4 {
-    font-size: 1.2em;
-    margin-bottom: 1.2em;
+    font-size: 1.6em;
 }
 
 .timeline-event-copy strong {
@@ -547,13 +551,8 @@ nav li a:hover:after {
 
 /* projects section
 ==================================================*/
-
-#projects {
-    padding: 100px 0;
-}
-
-.projects .section-title,.contact .section-title{
-    text-align: center;
+.project-list{
+    width: 30%;
 }
 
 .portfolio .categories-grid span {
@@ -731,7 +730,6 @@ nav li a:hover:after {
 ==================================================*/
 
 #contact {
-    padding: 100px 0;
     background: #f3f3f3
 }
 
@@ -739,6 +737,23 @@ nav li a:hover:after {
 #contact-form textarea {
     height: 50px;
     border-radius: 0;
+}
+
+.contact-details{
+    width: 30%;
+}
+
+.contact-details h3{
+    font-size: 2.4rem;
+    margin: 10px 0;
+}
+
+.contact-details p{
+    font-size: 1.4rem;
+}
+
+.contact-form-wrap{
+    width: 70%;
 }
 
 .input-wrap{
@@ -837,7 +852,7 @@ fieldset {
 }
 
 .social {
-    margin-top: 20px;
+    margin-top: 5px;
     overflow: hidden;
 }
 
@@ -884,46 +899,73 @@ fieldset {
     border: 2px solid green;
 }
 
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+footer{
+    text-align: right;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #000;
+    color: #fff;
+}
+
+
 /* Responsive media queries
 ==================================================*/
-
-@media (max-width: 991px) {
-    .portfolio .categories-grid .categories ul li a {
-        padding: 0 2px;
-    }
+@media only screen and (max-width : 899px){
+    .banner-inner,.type-text{width: 100%;}
+    .banner-inner{padding-top: 30px;}
+    .type-text{text-align: left;height: 75px;}
+    .about-wrap,.timeline-wrap,.contact-details,.contact-form-wrap{width: 100%;}
+    .about-img-div{height: 400px;width: 400px;margin: 20px auto 0;}
+    .img-div{margin: 0 auto;}
+    .growth-img{display: none;}
+    .section{padding: 50px 0;}
+    .portfolio-inner{padding-top: 20px;}
+    .project-list{width: 50%;}
+    .contact-details{margin-bottom: 30px;}
+    .about-border{right: auto;left: 20px;}
+    .section-title,.about .title{text-align: center;}
+    .section-title br,.about .title br{display: none;}
 }
 
-@media (max-width: 768px) {
-    .timeline-event-copy {
-        width: 90%;
-        left: 2em;
-    }
+@media only screen and (max-width : 599px){
+    header{padding: 10px;}
+    .logo-wrap{width: 100%;text-align: center;}
+    .logo-trans{display: inline-block;}
+    nav{flex-wrap: wrap;height: auto;}
+    nav ul{width: 100%;display: flex;justify-content: space-around;flex-wrap: wrap;}
+    nav li{margin: 5px;}
+    nav li a{padding: 5px;display: block;}
+    .banner-wrap .dash{font-size: 3rem;margin-bottom: 20px;}
+    .section.banner h1{font-size: 5rem;color: #fff;}
+    .type-text{text-align: right;}
+    .about .title,.section-title{font-size: 3.5rem;}
+    .about h2{font-size: 2.5rem;}
+    .abt-me-txt{font-size: 1.8rem;}
+    .signature-wrap{width: 100%;text-align: center;}
+    .about .signature{width: 200px;margin-top: 10px;}
+    .about-border{top: 20px;left: 60px;}
 }
 
-@media (max-width: 500px) {
-    h1 {
-        font-family: 'Playfair Display', serif;
-        font-size: 50px;
-        line-height: 50px;
-    }
-    #home,
-    .disply-table {
-        height: 600px;
-    }
-    .about-border {
-        width: 265px;
-    }
-    .portfolio .categories-grid .categories ul li {
-        list-style: none;
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 420px) {
-    nav li {
-        margin: 6px;
-    }
-    nav li a {
-        font-size: 10px;
-    }
+@media only screen and (max-width : 400px){
+    nav li{width: 40%;}
+    nav li a{text-align: center;}
 }
