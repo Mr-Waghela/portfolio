@@ -136,8 +136,8 @@ $(document).ready(function () {
   var yyyy = tdate.getFullYear(); //yields year
   var currentDate= dd + "-" +( MM+1) + "-" + yyyy;
   var ele = document.getElementById('time');
-  ele.setAttribute('datetime',currentDate);
-  ele.innerText = dd + ' ' + monthArr[MM] + ' ' + yyyy;
+  // ele.setAttribute('datetime',currentDate);
+  // ele.innerText = dd + ' ' + monthArr[MM] + ' ' + yyyy;
 });
 
 

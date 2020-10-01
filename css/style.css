@@ -926,6 +926,88 @@ footer{
     color: #fff;
 }
 
+.mobile-menu{display: none;}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+}
+
+.overlay > label {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    top: -8px;
+    left: 0;
+    width: 30px;
+    height: 16px;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.overlay > label::before {
+    content: '';
+    display: block;
+    position: relative;
+    top: 5px;
+    border-top: 2px solid #ffffff;
+}
+
+.bg-nav .overlay > label,.bg-nav .overlay > label::before{
+    border-color: #000;
+}
+
+
+.verticalNav {
+    position: absolute;
+    top: -75px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    padding: 5px 30px;
+    font-size: 1.8rem;
+    box-sizing: border-box;
+    transition: top 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bg-nav .verticalNav{
+    background-color: #fff;
+}
+
+.verticalNav a {
+    color: #fff;
+    padding-left: 10px;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+}
+
+.bg-nav .verticalNav a {
+    color: #000;
+}
+
+.verticalNav a:first-child{
+    padding-left: 0;
+}
+
+
+
+#toggle {
+    position: absolute;
+    visibility: hidden;
+}
+
+#toggle:checked ~ .verticalNav {
+    top: 76px;
+}
+
+#toggle:checked  ~ .puppies {
+    margin-top: 135px;
+}
+
 
 /* Responsive media queries
 ==================================================*/
@@ -947,11 +1029,12 @@ footer{
 }
 
 @media only screen and (max-width : 599px){
-    header{padding: 10px;}
-    .logo-wrap{width: 100%;text-align: center;}
+    .mobile-menu{display: block;width: 80%;}
+    .banner-inner{padding-top: 100px;}
+    .logo-wrap{width: 20%;text-align: right;}
     .logo-trans{display: inline-block;}
-    nav{flex-wrap: wrap;height: auto;}
-    nav ul{width: 100%;display: flex;justify-content: space-around;flex-wrap: wrap;}
+    nav{flex-wrap: wrap;height: auto;padding: 10px 0;}
+    nav ul{display: none;}
     nav li{margin: 5px;}
     nav li a{padding: 5px;display: block;}
     .banner-wrap .dash{font-size: 3rem;margin-bottom: 20px;}
@@ -963,6 +1046,8 @@ footer{
     .signature-wrap{width: 100%;text-align: center;}
     .about .signature{width: 200px;margin-top: 10px;}
     .about-border{top: 20px;left: 60px;}
+    .img-div{height: 300px;width: 300px;font-size: 3rem;}
+    .about-border{height: 300px;width: 300px;left: 30px;top: 10px;}
 }
 
 @media only screen and (max-width : 400px){
