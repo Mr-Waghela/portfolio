@@ -493,7 +493,7 @@ nav li a:hover:after {
     position: relative;
     top: -1.875em;
     left: 4em;
-    width: 100%;
+    width: 90%;
 }
 
 .timeline-event-copy h3 {
