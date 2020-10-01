@@ -62,6 +62,16 @@ $(document).ready(function () {
     });
 
 
+
+    // Parallax
+    var parallax = function () {
+        $(window).stellar();
+    };
+
+    $(function () {
+        parallax();
+    });
+
     // AOS
     AOS.init({
         duration: 1200,
@@ -69,11 +79,88 @@ $(document).ready(function () {
         disable: 'mobile'
     });
 
+    //  isotope
+    $('#projects').waitForImages(function () {
+        var $container = $('.portfolio_container');
+        $container.isotope({
+            filter: '*',
+        });
+
+        $('.portfolio_filter a').click(function () {
+            $('.portfolio_filter .active').removeClass('active');
+            $(this).addClass('active');
+
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 500,
+                    animationEngine: "jquery"
+                }
+            });
+            return false;
+        });
+
+    });
 
 
     // Contact Form 	
 
+    // validate contact form
+    $(function () {
+        $('#contact-form').validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                email: {
+                    required: true
+                },
+                phone: {
+                    required: false
+                },
+                message: {
+                    required: true
+                }
 
+            },
+            messages: {
+                name: {
+                    required: "This field is required",
+                    minlength: "your name must consist of at least 2 characters"
+                },
+                email: {
+                    required: "This field is required"
+                },
+                message: {
+                    required: "This field is required"
+                }
+            },
+            submitHandler: function (form) {
+                $(form).ajaxSubmit({
+                    type: "POST",
+                    data: $(form).serialize(),
+                    url: "process.php",
+                    success: function () {
+                        $('#contact :input').attr('disabled', 'disabled');
+                        $('#contact').fadeTo("slow", 1, function () {
+                            $(this).find(':input').attr('disabled', 'disabled');
+                            $(this).find('label').css('cursor', 'default');
+                            $('#success').fadeIn();
+                        });
+                    },
+                    error: function (err) {
+                        console.log(err)
+                        $('#contact').fadeTo("slow", 1, function () {
+                            $('#error').fadeIn();
+                        });
+                    }
+                });
+            }
+        });
+
+    });
 });
 
 
