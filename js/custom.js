@@ -90,7 +90,7 @@ $(document).ready(function () {
           var message=msg.val();
           if(message){
             msg.parent().removeClass("invalid").addClass("valid");
-            event.unbind('click');
+            $("#submit").unbind('click');
             var $form = $('contact-form');
             $.post($form.attr("action"), $form.serialize()).then(function() {
               alert('Your message was sent successfully! I will be in touch as soon as I can.');
