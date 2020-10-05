@@ -238,12 +238,8 @@ nav li a {
 
  nav li a:hover{
 	outline: 0;
-    -webkit-transition: color .5s ease;
-    -moz-transition: color .5s ease;
-    -ms-transition: color .5s ease;
-    -o-transition: color .5s ease;
-    transition: color .5s ease;
     cursor: pointer;
+    color: #fff;
 }
  nav li a:hover:after, nav li a:hover:before{
 	outline: 0;
@@ -375,7 +371,7 @@ nav li a:hover:after {
 }
 
 .about h2{
-    font-size: 4rem;margin-bottom: 20px;margin-top: 10px;
+    font-size: 3.2rem;margin-bottom: 20px;margin-top: 10px;
 }
 
 .abt-me-txt{
@@ -517,7 +513,7 @@ nav li a:hover:after {
     color: white;
     font-size: 12px;
     font-weight: bold;
-    background-color: black;
+    background-color: #555;
     box-shadow: inset 0 0 0 0em #425BB5;
     display: inline-block;
     margin-bottom: 1.2em;
@@ -663,10 +659,6 @@ nav li a:hover:after {
     padding: 50px 0;
 }
 
-.portfolio-inner {
-    padding-bottom: 0 !important;
-    padding-top: 140px;
-}
 
 .modal-content {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
@@ -714,6 +706,7 @@ nav li a:hover:after {
 #contact-form textarea {
     height: 50px;
     border-radius: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .contact-details{
@@ -727,10 +720,11 @@ nav li a:hover:after {
 
 .contact-details p{
     font-size: 1.4rem;
+    margin-bottom: 20px;
 }
 
 .contact-form-wrap{
-    width: 70%;
+    width: 50%;
 }
 
 .input-wrap{
@@ -985,4 +979,5 @@ footer{
 @media only screen and (max-width : 400px){
     nav li{width: 40%;}
     nav li a{text-align: center;}
+    .dash-wrap{padding-left: 0;}
 }
