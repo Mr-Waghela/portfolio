@@ -26,6 +26,7 @@ body{font-family: 'Open sans',-apple-system, BlinkMacSystemFont, Segoe UI, segoe
 .section-title{font-size: 5rem;line-height: 1;margin-bottom: 50px;}
 .container{max-width: 1220px;margin: 0 auto;padding: 0 20px;}
 .section{padding: 100px 0;}
+.mobile-social{display: none;}
 
 /* preloader
 ==================================================*/
@@ -184,7 +185,7 @@ header {
 	width: 50px;
 	height: 50px;
 	display: block;
-	border: 5px solid #fff;
+	border: 5px solid #000;
 	position: relative;
 	transform: rotate(0deg);
 	transition: transform .4s ease-in-out;
@@ -199,7 +200,7 @@ header {
 	transition: transform .4s ease-in-out;
 	font-weight: 700;
 	font-size: 1.3rem;
-	color: #fff;
+	color: #000;
 }
 
 .logo-trans:hover {
@@ -228,7 +229,7 @@ nav li {
 nav li a {
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #fff;
+    color: #888;
     font-size: 1.1rem;
 		font-weight: bold;
 		padding: 10px;
@@ -237,7 +238,6 @@ nav li a {
 
  nav li a:hover{
 	outline: 0;
-    color: #fff;
     -webkit-transition: color .5s ease;
     -moz-transition: color .5s ease;
     -ms-transition: color .5s ease;
@@ -308,10 +308,8 @@ nav li a:hover:after {
     background: linear-gradient(89deg, #000000, #878282);
     background-size: 400% 400%;
     font-family: 'Source Code Pro', monospace;
-    -webkit-animation: gradban 50s ease infinite;
-    -moz-animation: gradban 50s ease infinite;
-    animation: gradban 50s ease infinite;
     padding-top: 0;
+    background: rgb(141, 140, 140) url('../img/banner.jpg') no-repeat;background-size: cover;
 }
 
 
@@ -320,27 +318,11 @@ nav li a:hover:after {
 .dash {font-family: 'Lato', sans-serif;text-transform: capitalize;letter-spacing: 2px;position: relative;color: #425BB5;margin-left: 20px;font-weight: 700;font-size: 1.6rem;}
 .dash:before {position: absolute;width: 15px;left: -10px;content: "";display: block;height: 2px;background: #425BB5;top: 50%;transform: translateX(-50%);}
 
-.banner-wrap .dash{color:#fff}
-.banner-wrap .dash:before{background:#fff}
+.banner-wrap .dash{color:#000}
+.banner-wrap .dash:before{background:#000}
 
 .section.banner h1 {
-    font-size: 8rem;line-height: 1.2;color: #fff;
-}
-
-@-webkit-keyframes gradban {
-    0%{background-position:0% 52%}
-    50%{background-position:100% 49%}
-    100%{background-position:0% 52%}
-}
-@-moz-keyframes gradban {
-    0%{background-position:0% 52%}
-    50%{background-position:100% 49%}
-    100%{background-position:0% 52%}
-}
-@keyframes gradban {
-    0%{background-position:0% 52%}
-    50%{background-position:100% 49%}
-    100%{background-position:0% 52%}
+    font-size: 8rem;line-height: 1.2;color: #000;
 }
 
 .banner-wrap {
@@ -356,7 +338,7 @@ nav li a:hover:after {
 	font-size: 5rem;
     line-height: 1.5;
     color: #fff;
-    text-align: center;
+    text-align: right;
 }
 
 .banner-wrap .dash{
@@ -857,7 +839,7 @@ fieldset {
 }
 
 .social li {
-    float: left;
+    display: inline-block;
 }
 
 .social li a {
@@ -942,8 +924,8 @@ footer{
     left: 0;
     width: 30px;
     height: 16px;
-    border-top: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
 }
 
 .overlay > label::before {
@@ -951,7 +933,7 @@ footer{
     display: block;
     position: relative;
     top: 5px;
-    border-top: 2px solid #ffffff;
+    border-top: 2px solid #000;
 }
 
 .bg-nav .overlay > label,.bg-nav .overlay > label::before{
@@ -979,7 +961,7 @@ footer{
 }
 
 .verticalNav a {
-    color: #fff;
+    color: #000;
     padding-left: 10px;
     text-transform: capitalize;
     font-size: 1.6rem;
@@ -1012,16 +994,19 @@ footer{
 /* Responsive media queries
 ==================================================*/
 @media only screen and (max-width : 899px){
+    .mobile-social{display: block;text-align: right;margin-bottom: 50px;}
     .banner-inner,.type-text{width: 100%;}
+    .dash-wrap{padding-left: 70px;}
     .banner-inner{padding-top: 30px;}
-    .type-text{text-align: left;height: 75px;}
+    .type-text{text-align: left;height: 75px;color: #000;}
     .about-wrap,.timeline-wrap,.contact-details,.contact-form-wrap{width: 100%;}
     .about-img-div{height: 400px;width: 400px;margin: 20px auto 0;}
+    .section.banner h1{color: #000;}
     .img-div{margin: 0 auto;}
     .growth-img{display: none;}
     .section{padding: 50px 0;}
     .portfolio-inner{padding-top: 20px;}
-    .project-list{width: 50%;}
+    .project-list{width: auto;max-width: 250px;}
     .contact-details{margin-bottom: 30px;}
     .about-border{right: auto;left: 20px;}
     .section-title,.about .title{text-align: center;}
@@ -1029,17 +1014,18 @@ footer{
 }
 
 @media only screen and (max-width : 599px){
+    .dash-wrap{padding-left: 40px;}
     .mobile-menu{display: block;width: 80%;}
-    .banner-inner{padding-top: 100px;}
+    .banner-inner{padding-top: 50px;}
     .logo-wrap{width: 20%;text-align: right;}
     .logo-trans{display: inline-block;}
     nav{flex-wrap: wrap;height: auto;padding: 10px 0;}
     nav ul{display: none;}
     nav li{margin: 5px;}
     nav li a{padding: 5px;display: block;}
-    .banner-wrap .dash{font-size: 3rem;margin-bottom: 20px;}
-    .section.banner h1{font-size: 5rem;color: #fff;}
-    .type-text{text-align: right;}
+    .banner-wrap .dash{font-size: 2.8rem;margin-top: 20px;}
+    .section.banner h1{font-size: 4.2rem;color: #000;}
+    .type-text{font-size: 3rem;}
     .about .title,.section-title{font-size: 3.5rem;}
     .about h2{font-size: 2.5rem;}
     .abt-me-txt{font-size: 1.8rem;}

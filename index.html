@@ -28,11 +28,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <base href="/">
     <!-- Bootstrap -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Open+Sans:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,900&family=Source+Code+Pro:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" />
     <!-- main style -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -64,7 +65,7 @@
                 </div>
             </div>
             <div class="logo-wrap">
-                <a href="#home" class="logo-trans"><span class="logo">CW</span></a>
+                <a href="#contact" class="logo-trans"><span class="logo">CW</span></a>
             </div>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -81,8 +82,19 @@
         <div class="container">
             <div class="banner-wrap" id="home">
                 <div class="banner-inner" data-aos="fade-up" data-aos-delay="0">
-                    <h4 class="dash">Chirag Waghela</h4>
+                    <ul class="d-flex social mobile-social">
+                        <li>
+                            <a href="https://www.linkedin.com/in/chirag-waghela/" target="_blank">
+                            <svg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 512 512'><path d='M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z'/></svg></a></li>
+                        <li>
+                            <a href="https://www.instagram.com/mr.waghela75/" target="_blank">
+                                <svg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 512 512'><path d='M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z'/><path d='M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z'/><path d='M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z'/></svg></a>
+                        </li>
+                    </ul>
                     <h1>Frontend <br> Developer.</h1> 
+                    <div class="dash-wrap">
+                        <h4 class="dash">Chirag Waghela</h4>
+                    </div>
                 </div>
                 <div class="type-text">
                     <span
@@ -170,7 +182,7 @@
                 <div class="portfolio-div">
                     <div class="portfolio">
                         <!-- portfolio_container -->
-                        <div class="portfolio_container d-flex flex-wrap justify-content-between" data-aos="fade-up">
+                        <div class="portfolio_container d-flex flex-wrap justify-content-around" data-aos="fade-up">
                             <!-- single work -->
                             <div class="project-list">
                                 <a href="https://chirag7594.github.io/Pokedex/" class="portfolio_item" target="_blank"> <img src="img/projects/pokedex.png" alt="image" class="img-responsive" />
@@ -246,14 +258,14 @@
 
     <footer>
         <div class="container">
-            <p>Last updated : <time datetime="1-10-20" id="time">1<sub>st</sub> October</time></p>
+            <p>Last updated : <time datetime="1-10-20" id="time">1<sup>st</sup> October</time></p>
         </div>
     </footer>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous"></script>
-    <script src="js/custom.js"></script>
+    <script src="js/custom.min.js"></script>
 </body>
 
 </html>

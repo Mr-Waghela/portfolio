@@ -68,6 +68,8 @@ $(document).ready(function () {
         disable: 'mobile'
     });
 
+    $('#home').height($(window).height()); 
+
 
     // form validation
   $("#submit").click(function(event){
