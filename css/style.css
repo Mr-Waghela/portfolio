@@ -476,13 +476,10 @@ nav li a:hover:after {
     width: 90%;
 }
 
-.timeline-event-copy h3 {
+.timeline-event-copy .job-title {
     font-size: 2.4em;
 }
 
-.timeline-event-copy h4 {
-    font-size: 1.6em;
-}
 
 .timeline-event-copy strong {
     font-weight: 700;
@@ -723,7 +720,7 @@ nav li a:hover:after {
     width: 30%;
 }
 
-.contact-details h3{
+.contact-details .contact-det-title{
     font-size: 2.4rem;
     margin: 10px 0;
 }
@@ -740,42 +737,11 @@ nav li a:hover:after {
     margin-bottom: 10px;
 }
 
-#contact-form label {
+.input-wrap label{
     display: block;
-    margin-bottom: .2em;
-    font-size: 13px;
-    line-height: 13px;
-    font-size: 1.3rem;
-    line-height: 1.3rem;
-    color: #000;
-}
-
-#contact-form label.error {
-    margin-top: 10px;
-    margin-bottom: 1em;
-    font-size: 12px;
-    line-height: 12px;
-    font-size: 1.2rem;
-    line-height: 1.2rem;
-    color: #D33E43;
-    margin-left: 10px
-}
-
-#contact-form input[type="text"].error,
-#contact-form input[type="password"].error,
-#contact-form input[type="date"].error,
-#contact-form input[type="datetime"].error,
-#contact-form input[type="datetime-local"].error,
-#contact-form input[type="month"].error,
-#contact-form input[type="week"].error,
-#contact-form input[type="email"].error,
-#contact-form input[type="number"].error,
-#contact-form input[type="search"].error,
-#contact-form input[type="tel"].error,
-#contact-form input[type="time"].error,
-#contact-form input[type="url"].error,
-#contact-form textarea.error {
-    border-color: #D33E43
+    margin-bottom: 10px;
+    font-size: 0;
+    color: transparent;
 }
 
 textarea {
@@ -790,34 +756,6 @@ fieldset {
 
 .required {
     color: #e9266d
-}
-
-#success,
-#error {
-    display: none
-}
-
-#success p,
-#error p {
-    display: block;
-}
-
-#success p {
-    color: #425BB5;
-    font-size: 15px;
-    text-align: center;
-    padding: 10px;
-    border: 2px solid #425BB5;
-    margin-top: 10px;
-}
-
-#error p {
-    color: #D33E43;
-    font-size: 15px;
-    text-align: center;
-    padding: 10px;
-    border: 2px solid #D33E43;
-    margin-top: 10px;
 }
 
 #submit {
@@ -862,6 +800,7 @@ fieldset {
     display: none;
     margin-left: 10px;
 }	
+
 
 
 .invalid .error{

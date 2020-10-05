@@ -7,7 +7,7 @@
     <title>Chirag Waghela | Portfolio</title>
     <meta name="description" content="Chirag Waghela" />
     <meta name="keywords" content="Chirag Waghela, developer,javascript, development, wordpress, html5, angular" />
-    <meta name="viewport" content="user-scalable=1,initial-scale=1.0, maximum-scale=1, minimum-scale=0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="Chirag Waghela" />
     <meta property="og:title" content="Chirag Waghela | Portfolio" />
     <meta property="og:type" content="website" />
@@ -93,7 +93,7 @@
                     </ul>
                     <h1>Frontend <br> Developer.</h1> 
                     <div class="dash-wrap">
-                        <h4 class="dash">Chirag Waghela</h4>
+                        <h2 class="dash">Chirag Waghela</h2>
                     </div>
                 </div>
                 <div class="type-text">
@@ -146,8 +146,8 @@
                             <label class="timeline-event-icon"></label>
                             <div class="timeline-event-copy">
                                 <p class="timeline-event-thumbnail">January 2019 - Present</p>
-                                <h3>UI Developer</h3>
-                                <h4 class="dash">Media.net</h4>
+                                <div class="job-title">UI Developer</div>
+                                <div class="dash">Media.net</div>
                                 <p></p>
                             </div>
                         </li>
@@ -155,8 +155,8 @@
                             <label class="timeline-event-icon"></label>
                             <div class="timeline-event-copy">
                                 <p class="timeline-event-thumbnail">October 2018 - December 2018</p>
-                                <h3>Frontend Developer</h3>
-                                <h4 class="dash">Nevon Solutions</h4>
+                                <div class="job-title">Frontend Developer</div>
+                                <div class="dash">Nevon Solutions</div>
                                 <p></p>
                             </div>
                         </li>
@@ -205,10 +205,10 @@
             </div>
             <div class="d-flex flex-wrap">
                 <div class="contact-details" data-aos="fade-up">
-                    <h3>Email</h3>
+                    <div class="contact-det-title">Email</div>
                     <p><a href='&#109;ailto&#58;c&#104;i&#37;72%6&#49;g&#46;wa%67he%6C&#97;&#55;&#53;&#57;&#37;34&#64;&#103;mail%2Ecom'>chirag&#46;wagh&#101;&#108;&#97;7594&#64;gmai&#108;&#46;com</a></p>
     
-                    <h3>Social Network</h3>
+                    <div class="contact-det-title">Social Network</div>
     
                     <ul class="social">
                         <li>
@@ -222,22 +222,26 @@
                 </div>
                 <div class="contact-form-wrap" data-aos="fade-up">
                     <form class="contact-bg" id="contact-form" name="contact" method="POST" novalidate="novalidate" data-netlify="true" action="/#home">
-                        <label class="input-wrap" for="contact_name">
+                        <div class="input-wrap">
+                            <label for="contact_name">Your Name. </label>
                             <input type="text" name="name" class="form-control" id="contact_name" placeholder="Your Name" />
                             <span class="error">This field is required</span>
-                        </label>
-                        <label class="input-wrap" for="contact_email">
+                        </div>
+                        <div class="input-wrap">
+                            <label for="contact_email">Your Email - ID. </label>
                             <input type="email" name="email" class="form-control" id="contact_email" placeholder="Your E-mail" />
                             <span class="error">This field is required</span>
-                        </label>
-                        <label class="input-wrap" for="contact_number">
+                        </div>
+                        <div class="input-wrap">
+                            <label for="contact_number">Your Contact Number. </label>
                             <input type="number" name="number" class="form-control" id="contact_number" placeholder="Phone Number" maxlength="10"/>
                             <span class="error">This field is required</span>
-                        </label>
-                        <label class="input-wrap" for="message">
+                        </div>
+                        <div class="input-wrap">
+                            <label for="contact_message">Your Message .</label>
                             <textarea name="message" class="form-control" placeholder="Your Message" style="height:120px" id="contact_message"></textarea>
                             <span class="error">This field is required</span>
-                        </label>
+                        </div>
                         <button id="submit" type="submit" name="submit" class="btn btn-glance form-btn">Send</button>
                     </form>
                 </div>
