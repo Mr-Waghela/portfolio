@@ -229,7 +229,7 @@ nav li {
 nav li a {
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #888;
+    color: #fff;
     font-size: 1.1rem;
 		font-weight: bold;
 		padding: 10px;
@@ -305,8 +305,6 @@ nav li a:hover:after {
 /* home section
 ==================================================*/
 .section.banner {
-    background: linear-gradient(89deg, #000000, #878282);
-    background-size: 400% 400%;
     font-family: 'Source Code Pro', monospace;
     padding-top: 0;
     background: rgb(141, 140, 140) url('../img/banner.jpg') no-repeat;background-size: cover;
@@ -993,8 +991,15 @@ footer{
 
 /* Responsive media queries
 ==================================================*/
+
+@media only screen and (max-width : 1099px){
+    nav li:first-child a{color: #000;}
+}
+
+
 @media only screen and (max-width : 899px){
     .mobile-social{display: block;text-align: right;margin-bottom: 50px;}
+    nav li:nth-child(2) a{color: #000;}
     .banner-inner,.type-text{width: 100%;}
     .dash-wrap{padding-left: 70px;}
     .banner-inner{padding-top: 30px;}
