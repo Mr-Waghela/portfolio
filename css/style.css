@@ -601,12 +601,16 @@ nav li a:hover:after {
 .portfolio_item .portfolio_item_hover .item_info span {
     display: block;
     color: #fff;
-    font-size: 18px;
+    font-size: 14px;
     -webkit-transform: translateY(-100px);
     transform: translateY(-100px);
     -webkit-transition: all .3s ease-in-out .3s;
     transition: all .3s ease-in-out .3s;
     opacity: 0;
+}
+
+.portfolio_item .portfolio_item_hover .item_info span.project-title{
+    font-size: 18px;
 }
 
 .portfolio_item .portfolio_item_hover .item_info em {
