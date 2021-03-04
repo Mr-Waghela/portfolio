@@ -300,6 +300,10 @@ nav li a:hover:after {
 /* home section
 ==================================================*/
 .section.banner {
+    padding: 0;
+    margin-bottom: 100px;
+}
+.section.banner {
     font-family: 'Source Code Pro', monospace;
     padding-top: 0;
     background: rgb(141, 140, 140) url('../img/banner.jpg') no-repeat;background-size: cover;
@@ -320,7 +324,10 @@ nav li a:hover:after {
 
 .banner-wrap {
     height: 100vh;
-    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .banner-wrap .content-wrap{
@@ -328,7 +335,6 @@ nav li a:hover:after {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 100%;
 }
 
 .type-text{
@@ -936,7 +942,7 @@ footer{
     margin-top: 135px;
 }
 
-.banner-social{width: 100%;display: flex;justify-content: flex-end;}
+.banner-social{width: 100%;display: flex;justify-content: flex-end;margin-bottom: 50px;}
 .banner-social svg{fill: #fff;}
 
 /* Responsive media queries
