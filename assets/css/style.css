@@ -539,6 +539,18 @@ nav li a:hover:after {
     width: 30%;
 }
 
+.project-list img{
+    min-height: 200px;
+}
+
+.portfolio_container{
+    margin: 0 -15px;
+}
+
+.portfolio .project-list{
+    padding: 15px ;
+}
+
 .portfolio .categories-grid span {
     font-size: 30px;
     margin-bottom: 30px;
@@ -966,7 +978,7 @@ footer{
     .growth-img{display: none;}
     .section{padding: 50px 0;}
     .portfolio-inner{padding-top: 20px;}
-    .project-list{width: auto;max-width: 250px;}
+    .project-list{width: auto;max-width: 320px;}
     .contact-details{margin-bottom: 30px;}
     .about-border{right: auto;left: 20px;}
     .section-title,.about .title{text-align: center;}
