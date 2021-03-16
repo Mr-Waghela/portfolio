@@ -335,6 +335,7 @@ nav li a:hover:after {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
 }
 
 .type-text{
