@@ -1,0 +1,57 @@
+/* about section
+==================================================*/
+.about-wrap,
+.about-img-div {
+    width: 50%;
+    position: relative;
+}
+
+.about-img-div img {
+    margin: 0 auto;
+}
+
+.about-border {
+    position: absolute;
+    border: 10px solid #425BB5;
+    width: 400px;
+    height: 400px;
+    top: 20px;
+    right: 20px;
+    z-index: 1
+}
+
+.about .title {
+    font-size: 5rem;
+    margin-bottom: 50px;
+}
+
+.about .signature {
+    margin-top: 50px;
+}
+
+.about h2 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.abt-me-txt {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.signature-wrap {
+    width: 200px;
+}
+
+.img-div {
+    height: 400px;
+    width: 400px;
+    background-color: #000;
+    color: #fff;
+    font-size: 5rem;
+    letter-spacing: 2px;
+    padding: 40px;
+    text-align: center;
+}

@@ -1,3 +1,4 @@
+import '../styles/Projects.css'
 
 const Projects = () => {
   return (

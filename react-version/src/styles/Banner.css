@@ -1,0 +1,82 @@
+/* home section
+==================================================*/
+.section.banner {
+    padding: 0;
+    margin-bottom: 100px;
+}
+
+.section.banner {
+    font-family: 'Source Code Pro', monospace;
+    padding-top: 0;
+}
+
+
+.banner-inner {
+    width: 50%;
+}
+
+.dash {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    position: relative;
+    color: #425BB5;
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.dash:before {
+    position: absolute;
+    width: 15px;
+    left: -10px;
+    content: "";
+    display: block;
+    height: 2px;
+    background: #425BB5;
+    top: 50%;
+    transform: translateX(-50%);
+}
+
+.banner-wrap .dash {
+    color: #000
+}
+
+.banner-wrap .dash:before {
+    background: #000
+}
+
+.section.banner h1 {
+    font-size: 8rem;
+    line-height: 1.2;
+    color: #000;
+}
+
+.banner-wrap {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner-wrap .content-wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.type-text {
+    width: 50%;
+    font-size: 5rem;
+    line-height: 1.5;
+    color: #fff;
+    text-align: right;
+}
+
+.banner-wrap .dash {
+    font-size: 2.2rem;
+    font-family: 'Source Code Pro', monospace;
+}

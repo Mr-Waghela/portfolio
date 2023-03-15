@@ -1,7 +1,11 @@
+import "../styles/Banner.css"
 
 const Banner = () => {
   return (
-      <div className="section banner">
+      <div className="section banner" style={{
+          background: `rgb(141, 140, 140) url('${process.env.PUBLIC_URL}/assets/img/banner.jpg') no-repeat`,
+        backgroundSize: `cover`
+      }}>
           <div className="container">
               <div className="banner-wrap" id="home">
                   <ul className="d-flex social banner-social">

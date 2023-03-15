@@ -1,3 +1,4 @@
+import '../styles/Contact.css'
 const Contact = () => {
   return (
       <div className="section contact" id="contact">
@@ -29,7 +30,7 @@ const Contact = () => {
                       </div>
                   </div>
                   <div className="contact-form-wrap" data-aos="fade-up">
-                      <form className="contact-bg" id="contact-form" name="contact" method="POST" noValidate="novalidate" data-netlify="true" action="/#home">
+                      <form className="contact-bg" id="contact-form" name="contact" method="POST" noValidate="novalidate" data-netlify="true" >
                           <div className="input-wrap">
                               <label htmlFor="contact_name">Your Name. </label>
                               <input type="text" name="name" className="form-control" id="contact_name" placeholder="Your Name" />
