@@ -1,15 +1,10 @@
 /* home section
 ==================================================*/
 .section.banner {
-    padding: 0;
+    padding-top: 30px;
     margin-bottom: 100px;
-}
-
-.section.banner {
     font-family: 'Source Code Pro', monospace;
-    padding-top: 0;
 }
-
 
 .banner-inner {
     width: 50%;
