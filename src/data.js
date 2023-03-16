@@ -22,7 +22,7 @@ export const about = {
     title: 'Know About me',
     intoText: `Hi! I'm Chirag &#128075;&#127996; &#128526;,`,
     description:[
-        `Hey there! I'm a 28-year-old Front End Engineer from Mumbai, with over four years of kickass experience under my belt (and counting, of course!)💓.`,
+        `Yo! I'm a 28-year-old Front End Engineer from Mumbai, with over four years of kickass experience under my belt (and counting, of course!)💓.`,
         `A I like to think of myself as a coding ninja who loves nothing more than cracking tough problems. When I'm not crushing it at work, I'm all about learning new things and helping others grow as developers - I'm a natural born mentor, you see.🧭 `,
         `And when I'm off the clock, you can catch me pumping iron at the gym, chilling at the beach, or cruising around Mumbai on my sweet ride.🏋️‍♂️🏖 &#128692;&#127996;`
     ],
