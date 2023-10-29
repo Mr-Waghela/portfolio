@@ -72,11 +72,7 @@ const Header = () => {
           </div>
           <div className="logo-wrap">
             <a href="#contact" className="logo-trans">
-              {/* <span className="logo">CW</span> */}
-              <img
-                src="https://www.chirag-waghela.in/assets/logos/v4.png"
-                alt="Chirag Waghela"
-              />
+              <span className="logo">CW</span>
             </a>
           </div>
           <ul>
