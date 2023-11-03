@@ -1,6 +1,5 @@
 const SocialIcon = ({ data }) => {
   let isDownload = data.name === "Resume" ? true : false;
-  console.log(isDownload);
   return (
     <li>
       <a
