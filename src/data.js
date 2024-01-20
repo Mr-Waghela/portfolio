@@ -101,12 +101,12 @@ export const projects = {
       desc: "Simple Web Quiz using VUE@3 cdn",
       tech: "HTML / CSS / Vue.js",
     },
-    {
-      url: "https://ecommerce-react-mr-waghela.vercel.app/",
-      img: "assets/img/projects/ECommerce-react.png",
-      name: "React Commerce",
-      desc: "Static React Ecommerce Website",
-      tech: "React.js / Styled component / Router",
-    },
+    // {
+    //   url: "https://ecommerce-react-mr-waghela.vercel.app/",
+    //   img: "assets/img/projects/ECommerce-react.png",
+    //   name: "React Commerce",
+    //   desc: "Static React Ecommerce Website",
+    //   tech: "React.js / Styled component / Router",
+    // },
   ],
 };
