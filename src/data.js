@@ -101,6 +101,13 @@ export const projects = {
       desc: "Simple Web Quiz using VUE@3 cdn",
       tech: "HTML / CSS / Vue.js",
     },
+    {
+      url: "https://url-shortner.chirag-waghela.in/",
+      img: "assets/img/projects/url-shortner.png",
+      name: "Url Shortner",
+      desc: "Users can input long URLs and get shortened versions.",
+      tech: "Frontend:React, Vite, SCSS | Backend: Firebase (Firestore for database)",
+    },
     // {
     //   url: "https://ecommerce-react-mr-waghela.vercel.app/",
     //   img: "assets/img/projects/ECommerce-react.png",
