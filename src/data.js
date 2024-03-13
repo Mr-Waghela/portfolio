@@ -102,7 +102,7 @@ export const projects = {
       tech: "HTML / CSS / Vue.js",
     },
     {
-      url: "https://url-shortner.chirag-waghela.in/",
+      url: "https://short.chirag-waghela.in/",
       img: "assets/img/projects/url-shortner.png",
       name: "Url Shortner",
       desc: "Users can input long URLs and get shortened versions.",
