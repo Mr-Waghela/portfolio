@@ -47,7 +47,14 @@ export const experience = {
   title: "My Experience",
   timeline: [
     {
-      period: "September 2023 - Present",
+      period: "May 2023 - Present",
+      jobTitle: "Senior Application Developer",
+      companyName: "IBM",
+      workDescription:
+        "In my current position as a Senior Application Developer, my responsibilities encompass a diverse range of tasks. These include active participation in client-side project, providing guidance and mentorship to junior team members, conducting thorough code reviews, and actively contributing to coding tasks. Moreover, I am heavily involved in the development of Finance Web App, utilizing technologies such as React 18, Redux, Redux Saga, Sass, Material UI etc.",
+    },
+    {
+      period: "September 2023 - May 2023",
       jobTitle: "Sr. SDE",
       companyName: "Wohlig Transformation Pvt Ltd",
       workDescription:
@@ -60,13 +67,13 @@ export const experience = {
       workDescription:
         "In my role as a UI developer, I have collaborated closely with business developers to manage daily tasks and ensure project delivery. I have also provided mentorship and coaching to junior developers. One of my key responsibilities has been the development of multiple mobile-responsive websites using the Wordpress platform. Additionally, I have worked with high-value clients to implement new features and meet their requirements on a weekly basis, utilizing technologies such as Vue.js, SCSS, Tailwind, and Blade within the Wordpress CMS.",
     },
-    /*{
+    {
       period: "October 2018 - December 2018",
       jobTitle: "Frontend Developer",
       companyName: "Nevon Solutions",
       workDescription:
         "Throughout my experience, I have successfully completed numerous projects that involved using HTML/CSS templates integrated with ASP.net.",
-    },*/
+    },
   ],
 };
 
