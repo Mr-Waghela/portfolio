@@ -51,7 +51,7 @@ export const experience = {
       jobTitle: "Senior Application Developer",
       companyName: "IBM",
       workDescription:
-        "In my current position as a Senior Application Developer, my responsibilities encompass a diverse range of tasks. These include active participation in client-side project, providing guidance and mentorship to junior team members, conducting thorough code reviews, and actively contributing to coding tasks. Moreover, I am heavily involved in the development of Finance Web App, utilizing technologies such as React 18, Redux, Redux Saga, Sass, Material UI etc.",
+        "Currently working at IBM on a project for Mahindra and Mahindra Finance to develop a customer-centric finance application. The app enables users to access various financial services (such as loans, investments, etc.) and apply for specific features. It includes user-specific authentication and integrates payment gateways like Camspay and PayU for seamless transactions. My role involves overseeing the integration of these features while ensuring security and scalability of the platform. In my current position as a Senior Application Developer, my responsibilities encompass a diverse range of tasks. These include active participation in client-side project, providing guidance and mentorship to junior team members, conducting thorough code reviews, and actively contributing to coding tasks. Moreover, I am heavily involved in the development of Finance Web App, utilizing technologies such as React 18, Redux, Redux Saga, Sass, Material UI etc.",
     },
     {
       period: "September 2023 - May 2023",
