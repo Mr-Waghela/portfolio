@@ -1,3 +1,26 @@
+const calculateAge = (birthDate) => {
+  const today = new Date();
+  const birth = new Date(birthDate);
+  let age = today.getFullYear() - birth.getFullYear();
+  const monthDiff = today.getMonth() - birth.getMonth();
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+    age--;
+  }
+  return age;
+};
+
+const calculateExperience = (startDate) => {
+  const today = new Date();
+  const start = new Date(startDate);
+  let experience = today.getFullYear() - start.getFullYear();
+  const monthDiff = today.getMonth() - start.getMonth();
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < start.getDate())) {
+    experience--;
+  }
+  return experience;
+};
+
+
 export const bannerData = {
   typeWriterText: [
     "HTML",
@@ -34,9 +57,9 @@ export const bannerData = {
 
 export const about = {
   title: "Know About me",
-  intoText: `Hi! I'm Chirag &#128075;&#127996; &#128526;,`,
+  introText: `Hi! I'm Chirag &#128075;&#127996; &#128526;,`,
   description: [
-    `Hi There! I'm a 29-year-old Front End Engineer from Mumbai, with over five years of kickass experience under my belt (and counting, of course!)💓.`,
+    `Hi There! I'm a ${calculateAge("1994-05-07")}-year-old Front End Engineer from Mumbai, with over ${calculateExperience("2018-10-02")} years of kickass experience under my belt (and counting, of course!)💓.`,
     `I like to think of myself as a coding ninja who loves nothing more than cracking tough problems. When I'm not crushing it at work, I'm all about learning new technology and helping others grow as developers - I'm a natural born mentor, you see.🧭 `,
     `And when I'm off the clock, you can catch me pumping iron at the gym, chilling at the beach, or cruising around Mumbai on my sweet ride.🏋️‍♂️🏖 &#128692;&#127996;`,
   ],
